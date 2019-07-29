@@ -280,9 +280,82 @@
                         
                     </li>
                     <li>
-                        <a href="login.html">
+                        <a  data-toggle="modal" href="#modal-form">
                             <i class="fa fa-phone"></i>
                         </a>
+                        <div id="modal-form" class="modal fade text-left" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Abre ua incidencia</h3>
+
+                                                <p>Completa los siguientes datos para poder ayudarte. Se lo más breve y preciso posible</p>
+
+                                                <form role="form">
+                                                    <div class="form-group">
+                                                        <label>Selecciona una categoria</label>
+                                                        <select class="form-control">
+                                                            <option disabled selected>Seleccionar ...</option>
+                                                            <option>Capacitación</option>
+                                                            <option>Internet</option>
+                                                            <option>Impresión</option>
+                                                            <option>Orden</option>
+                                                            <option>Carta</option>
+                                                            <option>Ptoblemas Tecnicos</option>
+                                                            <option>Mantenimiento de tablets</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Describe lo que ocurrió</label>
+                                                        <textarea class="form-control" rows="5"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Ingresa tu nombre</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Número de teléfono para devolver la llamada</label>
+                                                        <div class="input-group m-b">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-phone"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <button class="btn btn-sm btn-primary btn-block mt-2">Abrir incidencia</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h4>Herramientas de administración remota</h4>
+                                                <p>Es posible que el Equipo de Soporte necesite acceder a tu equipo para verificar el problema. Si usas Windows, estos son unos accessos directos para que descargues las erramientas necesarias.</p>
+                                                <p>Elige la herramienta que el Equipo de soporte te indique.</p>
+                                                <p class="text-center p-4">
+                                                    <a href="https://download.anydesk.com/AnyDesk.exe">
+                                                        <img src="img/anydesk.svg" alt="">
+                                                    </a>
+                                                </p>
+                                                <p class="text-center">
+                                                    <a href="https://anydesk.com/es/downloads" target="_blank">o descarga AnyDesk para otras plataformas</a>
+                                                </p>
+                                                <p>
+                                                    También puedes iniciar el chat para resolver cualquier duda y/o consulta que tengas. Disponible de lunes a sábado de 9:00 AM a 9:00 PM
+                                                </p>
+                                                <p>
+                                                    <a href="#!" class="btn btn-default btn-block py-1" style="min-height: auto">
+                                                        <i class="fa fa-comment-o"></i> Iniciar chat
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
