@@ -9596,3 +9596,15 @@ body.md-skin {
     margin: 0;
   }
 }
+
+/*custom style intelimedia*/
+.c-cards--equals .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-cards--equals .row .widget{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
