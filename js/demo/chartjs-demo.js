@@ -1,21 +1,21 @@
 $(function () {
 
     var lineData = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"],
         datasets: [
 
             {
-                label: "Data 1",
+                label: "Mes Actual",
                 backgroundColor: 'rgba(26,179,148,0.5)',
                 borderColor: "rgba(26,179,148,0.7)",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [28, 48, 40, 19, 86, 27, 90, 30, 70, 25, 27, 20, 32, 56, 32, 46, 75, 35, 31, 36, 65, 24, 27, 20, 32, 56, 32, 46, 75, 35]
             },{
-                label: "Data 2",
+                label: "Mes Anterior",
                 backgroundColor: 'rgba(220, 220, 220, 0.5)',
                 pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
+                data: [65, 59, 80, 81, 56, 55, 40, 20, 40, 90, 20, 40, 90, 81, 56, 55, 40, 20, 40, 90, 20, 40, 90, 80, 81, 56, 55, 40, 20, 40]
             }
         ]
     };
