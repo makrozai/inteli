@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
     <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
@@ -469,7 +470,57 @@
                             <div class="ibox-content">
                                 <div class="row">
                                     <div class="col-sm-9">
-                                        <a href="#!" class="btn btn-primary"><i class="fa fa-download mr-1"></i>Descarga Reporte</a>
+                                        <a data-toggle="modal" href="#modal-form" class="btn btn-primary">
+                                            <i class="fa fa-download mr-1"></i>Descarga Reporte
+                                        </a>
+                                        <div id="modal-form" class="modal fade text-left" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <h3 class="m-t-none m-b">Genera un reporte</h3>
+                
+                                                                <p>Completa los siguientes datos.</p>
+                
+                                                                <form role="form">
+                                                                    <div class="form-group">
+                                                                        <label>Selecciona un tipo de reporte</label>
+                                                                        <select class="form-control">
+                                                                            <option disabled selected>Seleccionar ...</option>
+                                                                            <option>Afiliaciones</option>
+                                                                            <option>Publicidad</option>
+                                                                            <option>Encuestas</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group datepicker-from">
+                                                                        <label>Desde</label>
+                                                                        <div class="input-group date">
+                                                                            <span class="input-group-addon">
+                                                                                <i class="fa fa-calendar"></i>
+                                                                            </span>
+                                                                            <input type="text" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group datepicker-to">
+                                                                        <label>Hasta</label>
+                                                                        <div class="input-group date">
+                                                                            <span class="input-group-addon">
+                                                                                <i class="fa fa-calendar"></i>
+                                                                            </span>
+                                                                            <input type="text" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group text-center">
+                                                                        <button class="btn btn-primary">Descarga tu reporte</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-sm-3 right-align">
                                         <div class="input-group">
@@ -516,6 +567,9 @@
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
 
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
     <script src="js/demo/chartjs-demo.js"></script>
@@ -536,6 +590,22 @@
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
+            });
+
+            $('.datepicker-from .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            $('.datepicker-to .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
             });
         });
     </script>
