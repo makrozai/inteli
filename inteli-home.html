@@ -120,7 +120,7 @@
                     </li>
                     <li>
                         <a  data-toggle="modal" href="#modal-form">
-                            <i class="fa fa-phone"></i>
+                            <i class="fa fa-phone c-icon-large"></i>
                         </a>
                         <div id="modal-form" class="modal fade text-left" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
@@ -311,11 +311,13 @@
                     <h4>Encuestas del  mes</h4>
                     <p>Estas son tus encuestas realizadas en el mes</p>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 c-doughnut-dashboard">
+                            <span class="c-doughnut-dashboard__average">45.5</span>
                             <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
                             <h5 >Restaurante</h5>
                         </div>
                         <div class="col-lg-6">
+                            <span class="c-doughnut-dashboard__average">45.5</span>
                             <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
                             <h5 >Jorge Elias</h5>
                         </div>
@@ -378,8 +380,8 @@
             </div>
         </div>
         <div class="wrapper wrapper-content">
-            <div class="row">
-                <div class="col-lg-6">
+            <div class="row mb-4">
+                <div class="col-lg-6 c-cards__flex">
                     <div class="widget navy-bg no-padding">
                         <div class="row text-center">
                             <div class="col-md-6">
@@ -404,22 +406,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <a href="#!">
-                        <div class="widget lazur-bg no-padding text-center">
-                            <div class="p-m">
-                                <h2 class="font-bold no-margins">
-                                    Conoce como sacar el mayor provecho a tu plataforma con estos videos
-                                </h2>
-                            </div>
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-chart4"></div>
-                            </div>
+                <div class="col-lg-3 c-cards__flex">
+                    <div class="widget lazur-bg no-padding text-center">
+                        <div class="p-m">
+                            <h2 class="font-bold no-margins">
+                                Conoce como sacar el mayor provecho a tu plataforma con estos videos
+                            </h2>
                         </div>
-                    </a>
+                        <div class="flot-chart">
+                            <div class="flot-chart-content" id="flot-chart4"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="ibox ">
+                    <div class="ibox mb-0">
                         <div class="ibox-title">
                             <h5>Estas son tus notificaciones</h5>
                         </div>
@@ -472,7 +472,7 @@
                 </div>
             </div>
         </div>
-        <div class="small-chat-box fadeInRight animated">
+        <div class="small-chat-box fadeInRight animated c-small-chat-box">
 
             <div class="heading" draggable="true">
                 <small class="chat-date float-right">
