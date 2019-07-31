@@ -9640,3 +9640,23 @@ body.md-skin {
 .mt-2-5{
   margin-top: .7rem;
 }
+.none-added-waiter .col-lg-6:first-child{
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+.none-added-waiter .col-lg-6:first-child .ibox-content .row{
+  margin-bottom: 1em;
+}
+.none-added-waiter .col-lg-6:first-child .ibox-content .col-sm-6{
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.none-added-waiter--button{
+  display: none;
+}
+.none-added-waiter .none-added-waiter--button{
+  display: block;
+}
+.none-added-waiter .col-lg-6:last-child{
+  display: none;
+}
