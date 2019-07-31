@@ -111,7 +111,19 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group mt-2-5">
+                            <select class="form-control">
+                                <option disabled selected>Seleccionar empresa</option>
+                                <option>Empresa 1</option>
+                                <option>Empresa 2</option>
+                                <option>Empresa 3</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
@@ -127,7 +139,7 @@
                                 <div class="modal-content">
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Abre ua incidencia</h3>
+                                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Abre una incidencia</h3>
 
                                                 <p>Completa los siguientes datos para poder ayudarte. Se lo más breve y preciso posible</p>
 
@@ -171,7 +183,7 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <h4>Herramientas de administración remota</h4>
-                                                <p>Es posible que el Equipo de Soporte necesite acceder a tu equipo para verificar el problema. Si usas Windows, estos son unos accessos directos para que descargues las erramientas necesarias.</p>
+                                                <p>Es posible que el Equipo de Soporte necesite acceder a tu equipo para verificar el problema. Si usas Windows, estos son unos accessos directos para que descargues las herramientas necesarias.</p>
                                                 <p>Elige la herramienta que el Equipo de soporte te indique.</p>
                                                 <p class="text-center p-4">
                                                     <a href="https://download.anydesk.com/AnyDesk.exe">
@@ -185,7 +197,7 @@
                                                     También puedes iniciar el chat para resolver cualquier duda y/o consulta que tengas. Disponible de lunes a sábado de 9:00 AM a 9:00 PM
                                                 </p>
                                                 <p>
-                                                    <a href="#!" class="btn btn-default btn-block py-1" style="min-height: auto">
+                                                    <a href="#!" class="btn btn-default btn-block py-1 " style="min-height: auto">
                                                         <i class="fa fa-comment-o"></i> Iniciar chat
                                                     </a>
                                                 </p>
@@ -473,7 +485,6 @@
             </div>
         </div>
         <div class="small-chat-box fadeInRight animated c-small-chat-box">
-
             <div class="heading" draggable="true">
                 <small class="chat-date float-right">
                     02.19.2015
