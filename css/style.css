@@ -9660,3 +9660,12 @@ body.md-skin {
 .none-added-waiter .col-lg-6:last-child{
   display: none;
 }
+.c-video-dashboard{
+  position: relative;
+}
+.c-video-dashboard__btn{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
