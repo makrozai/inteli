@@ -9676,3 +9676,13 @@ body.md-skin {
 .c-table tr img{
   max-height: 90px;
 }
+.btn-primary, .label-primary, .open-small-chat{
+  background: #1F304C !important;
+  border-color: #1F304C !important;
+}
+.navy-bg.c-widget-principal {
+  background: #01D3C4 !important;
+}
+.lazur-bg.c-widget-principal {
+  background: #1F304C !important;
+}
