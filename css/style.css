@@ -9668,6 +9668,7 @@ body.md-skin {
   position: absolute;
   top: 90%;
   left: 50%;
+  z-index:100;
   transform: translateX(-50%);
 }
 .c-table tr td{
@@ -9685,4 +9686,7 @@ body.md-skin {
 }
 .lazur-bg.c-widget-principal {
   background: #1F304C !important;
+}
+i.fa.icon-big-manual-book {
+    transform: scale(1.5);
 }
