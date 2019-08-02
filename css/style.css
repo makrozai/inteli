@@ -9669,3 +9669,9 @@ body.md-skin {
   left: 50%;
   transform: translateX(-50%);
 }
+.c-table tr td{
+  vertical-align: middle !important;
+}
+.c-table tr img{
+  max-height: 90px;
+}

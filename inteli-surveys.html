@@ -100,7 +100,19 @@
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group mt-2-5">
+                                <select class="form-control">
+                                    <option disabled selected>Seleccionar empresa</option>
+                                    <option>Empresa 1</option>
+                                    <option>Empresa 2</option>
+                                    <option>Empresa 3</option>
+                                </select>
+                            </div>
+                        </form>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
@@ -108,9 +120,82 @@
                             
                         </li>
                         <li>
-                            <a href="login.html">
-                                <i class="fa fa-phone"></i>
+                            <a  data-toggle="modal" href="#modal-form">
+                                <i class="fa fa-phone c-icon-large"></i>
                             </a>
+                            <div id="modal-form" class="modal fade text-left" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Abre una incidencia</h3>
+    
+                                                    <p>Completa los siguientes datos para poder ayudarte. Se lo más breve y preciso posible</p>
+    
+                                                    <form role="form">
+                                                        <div class="form-group">
+                                                            <label>Selecciona una categoria</label>
+                                                            <select class="form-control">
+                                                                <option disabled selected>Seleccionar ...</option>
+                                                                <option>Capacitación</option>
+                                                                <option>Internet</option>
+                                                                <option>Impresión</option>
+                                                                <option>Orden</option>
+                                                                <option>Carta</option>
+                                                                <option>Ptoblemas Tecnicos</option>
+                                                                <option>Mantenimiento de tablets</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Describe lo que ocurrió</label>
+                                                            <textarea class="form-control" rows="5"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Ingresa tu nombre</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Número de teléfono para devolver la llamada</label>
+                                                            <div class="input-group m-b">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-addon">
+                                                                        <i class="fa fa-phone"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="number" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-primary btn-block mt-2">Abrir incidencia</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h4>Herramientas de administración remota</h4>
+                                                    <p>Es posible que el Equipo de Soporte necesite acceder a tu equipo para verificar el problema. Si usas Windows, estos son unos accessos directos para que descargues las herramientas necesarias.</p>
+                                                    <p>Elige la herramienta que el Equipo de soporte te indique.</p>
+                                                    <p class="text-center p-4">
+                                                        <a href="https://download.anydesk.com/AnyDesk.exe">
+                                                            <img src="img/anydesk.svg" alt="">
+                                                        </a>
+                                                    </p>
+                                                    <p class="text-center">
+                                                        <a href="https://anydesk.com/es/downloads" target="_blank">o descarga AnyDesk para otras plataformas</a>
+                                                    </p>
+                                                    <p>
+                                                        También puedes iniciar el chat para resolver cualquier duda y/o consulta que tengas. Disponible de lunes a sábado de 9:00 AM a 9:00 PM
+                                                    </p>
+                                                    <p>
+                                                        <a href="#!" class="btn btn-default btn-block py-1 " style="min-height: auto">
+                                                            <i class="fa fa-comment-o"></i> Iniciar chat
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -149,16 +234,9 @@
                                 </li>
                             </ul>
                         </li>
-    
-    
                         <li>
-                            <a href="login.html">
+                            <a href="inteli-login.html">
                                 <i class="fa fa-sign-out"></i> Log out
-                            </a>
-                        </li>
-                        <li>
-                            <a class="right-sidebar-toggle">
-                                <i class="fa fa-tasks"></i>
                             </a>
                         </li>
                     </ul>
@@ -376,6 +454,92 @@
                     <strong>Copyright</strong> Example Company &copy; 2014-2018
                 </div>
             </div>
+        </div>
+
+        <div class="small-chat-box fadeInRight animated c-small-chat-box">
+            <div class="heading" draggable="true">
+                <small class="chat-date float-right">
+                    02.19.2015
+                </small>
+                Small chat
+            </div>
+
+            <div class="content">
+
+                <div class="left">
+                    <div class="author-name">
+                        Monica Jackson <small class="chat-date">
+                        10:02 am
+                    </small>
+                    </div>
+                    <div class="chat-message active">
+                        Lorem Ipsum is simply dummy text input.
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="author-name">
+                        Mick Smith
+                        <small class="chat-date">
+                            11:24 am
+                        </small>
+                    </div>
+                    <div class="chat-message">
+                        Lorem Ipsum is simpl.
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        Alice Novak
+                        <small class="chat-date">
+                            08:45 pm
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        Check this stock char.
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="author-name">
+                        Anna Lamson
+                        <small class="chat-date">
+                            11:24 am
+                        </small>
+                    </div>
+                    <div class="chat-message">
+                        The standard chunk of Lorem Ipsum
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        Mick Lane
+                        <small class="chat-date">
+                            08:45 pm
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        I belive that. Lorem Ipsum is simply dummy text.
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-chat">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn"> <button
+                        class="btn btn-primary" type="button">Send
+                </button> </span></div>
+            </div>
+
+        </div>
+        <div id="small-chat">
+
+            <span class="badge badge-warning float-right">5</span>
+            <a class="open-small-chat" href="">
+                <i class="fa fa-comments"></i>
+
+            </a>
         </div>
     </div>
 
