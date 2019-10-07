@@ -1,0 +1,750 @@
+<!--
+*
+*  INSPINIA - Responsive Admin Theme
+*  version 2.9.2
+*
+-->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+      <title>INSPINIA | Dashboard</title>
+
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+      <link href="css/plugins/chartist/chartist.min.css" rel="stylesheet">
+
+      <!-- Toastr style -->
+      <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+      <!-- Gritter -->
+      <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+      
+      <!-- c3 Charts -->
+      <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+
+      <link href="css/animate.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+      <div id="wrapper">
+          <nav class="navbar-default navbar-static-side" role="navigation">
+              <div class="sidebar-collapse">
+                  <ul class="nav metismenu" id="side-menu">
+                      <li class="nav-header">
+                          <div class="dropdown profile-element">
+                              <img alt="image" class="rounded-circle" src="img/profile_small.jpg"/>
+                              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                  <span class="block m-t-xs font-bold">David Williams</span>
+                                  <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                              </a>
+                              <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                  <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                  <li class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="inteli-login.html">Logout</a></li>
+                              </ul>
+                          </div>
+                          <div class="logo-element">
+                              IN+
+                          </div>
+                      </li>
+                      <li class="active">
+                          <a href="inteli-home.html">
+                              <i class="fa icon-home"></i>
+                              <span class="nav-label">Home</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="inteli-carte.html">
+                              <i class="fa icon-carta"></i>
+                              <span class="nav-label">Mi Carta</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="inteli-plate.html">
+                              <i class="fa icon-platos"></i>
+                              <span class="nav-label">Platos</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="inteli-waiter.html">
+                              <i class="fa icon-meseros"></i>
+                              <span class="nav-label">Meseros </span>
+                              <span class="label label-warning float-right">16/24</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="inteli-tables.html">
+                              <i class="fa icon-mesas"></i>
+                              <span class="nav-label">Mesas</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="inteli-surveys.html">
+                              <i class="fa icon-encuestas"></i>
+                              <span class="nav-label">Encuestas</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="inteli-comercial.html">
+                              <i class="fa icon-publicidades"></i>
+                              <span class="nav-label">Publicidades</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a data-toggle="modal" href="#modal-form">
+                              <i class="fa icon-reportes"></i>
+                              <span class="nav-label">Reportes</span>
+                              <span class="float-right label label-primary">SPECIAL</span>
+                          </a>
+                          
+                      </li>
+                  </ul>
+
+              </div>
+          </nav>
+          <div id="modal-form" class="modal fade text-left" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-body">
+                          <div class="row">
+                              <div class="col-sm-12">
+                                  <h3 class="m-t-none m-b">Genera un reporte</h3>
+
+                                  <p>Completa los siguientes datos.</p>
+
+                                  <form role="form">
+                                      <div class="form-group">
+                                          <label>Selecciona un tipo de reporte</label>
+                                          <select class="form-control">
+                                              <option disabled selected>Seleccionar ...</option>
+                                              <option>Afiliaciones</option>
+                                              <option>Publicidad</option>
+                                              <option>Encuestas</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-group datepicker-from">
+                                          <label>Desde</label>
+                                          <div class="input-group date">
+                                              <span class="input-group-addon">
+                                                  <i class="fa fa-calendar"></i>
+                                              </span>
+                                              <input type="text" class="form-control">
+                                          </div>
+                                      </div>
+                                      <div class="form-group datepicker-to">
+                                          <label>Hasta</label>
+                                          <div class="input-group date">
+                                              <span class="input-group-addon">
+                                                  <i class="fa fa-calendar"></i>
+                                              </span>
+                                              <input type="text" class="form-control">
+                                          </div>
+                                      </div>
+                                      <div class="form-group text-center">
+                                          <button class="btn btn-primary">Descarga tu reporte</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="page-wrapper" class="gray-bg dashbard-1">
+          <div class="row border-bottom">
+              <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                  <div class="navbar-header">
+                      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                          <i class="fa fa-bars"></i>
+                      </a>
+                      <form role="search" class="navbar-form-custom" action="search_results.html">
+                          <div class="form-group mt-2-5">
+                              <select class="form-control">
+                                  <option disabled selected>Seleccionar empresa</option>
+                                  <option>Empresa 1</option>
+                                  <option>Empresa 2</option>
+                                  <option>Empresa 3</option>
+                              </select>
+                          </div>
+                      </form>
+                  </div>
+                  <ul class="nav navbar-top-links navbar-right">
+                      <li>
+                          <span class="m-r-sm text-muted welcome-message">Necesitas ayuda? <br>contáctanos</span>
+                          
+                      </li>
+                      <li>
+                          <a  data-toggle="modal" href="#modal-form-contact">
+                              <i class="fa fa-phone c-icon-large"></i>
+                          </a>
+                          <div id="modal-form-contact" class="modal fade text-left" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                      <div class="modal-body">
+                                          <div class="row">
+                                              <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Abre una incidencia</h3>
+
+                                                  <p>Completa los siguientes datos para poder ayudarte. Se lo más breve y preciso posible</p>
+
+                                                  <form role="form">
+                                                      <div class="form-group">
+                                                          <label>Selecciona una categoria</label>
+                                                          <select class="form-control">
+                                                              <option disabled selected>Seleccionar ...</option>
+                                                              <option>Capacitación</option>
+                                                              <option>Internet</option>
+                                                              <option>Impresión</option>
+                                                              <option>Orden</option>
+                                                              <option>Carta</option>
+                                                              <option>Ptoblemas Tecnicos</option>
+                                                              <option>Mantenimiento de tablets</option>
+                                                          </select>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label>Describe lo que ocurrió</label>
+                                                          <textarea class="form-control" rows="5"></textarea>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label>Ingresa tu nombre</label>
+                                                          <input type="text" class="form-control">
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label>Número de teléfono para devolver la llamada</label>
+                                                          <div class="input-group m-b">
+                                                              <div class="input-group-prepend">
+                                                                  <span class="input-group-addon">
+                                                                      <i class="fa fa-phone"></i>
+                                                                  </span>
+                                                              </div>
+                                                              <input type="number" class="form-control">
+                                                          </div>
+                                                      </div>
+                                                      <div>
+                                                          <button class="btn btn-sm btn-primary btn-block mt-2">Abrir incidencia</button>
+                                                      </div>
+                                                  </form>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                  <h4>Herramientas de administración remota</h4>
+                                                  <p>Es posible que el Equipo de Soporte necesite acceder a tu equipo para verificar el problema. Si usas Windows, estos son unos accessos directos para que descargues las herramientas necesarias.</p>
+                                                  <p>Elige la herramienta que el Equipo de soporte te indique.</p>
+                                                  <p class="text-center p-4">
+                                                      <a href="https://download.anydesk.com/AnyDesk.exe">
+                                                          <img src="img/anydesk.svg" alt="">
+                                                      </a>
+                                                  </p>
+                                                  <p class="text-center">
+                                                      <a href="https://anydesk.com/es/downloads" target="_blank">o descarga AnyDesk para otras plataformas</a>
+                                                  </p>
+                                                  <p>
+                                                      También puedes iniciar el chat para resolver cualquier duda y/o consulta que tengas. Disponible de lunes a sábado de 9:00 AM a 9:00 PM
+                                                  </p>
+                                                  <p>
+                                                      <a href="#!" class="btn btn-default btn-block py-1 " style="min-height: auto">
+                                                          <i class="fa fa-comment-o"></i> Iniciar chat
+                                                      </a>
+                                                  </p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                      <li>
+                          <a href="#!">
+                              <i class="fa icon-big-manual-book"></i>
+                          </a>
+                      </li>
+                      <li class="dropdown">
+                          <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                              <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                          </a>
+                          <ul class="dropdown-menu dropdown-alerts list-group clear-list m-t">
+                              <li class="list-group-item fist-item">
+                                  <span class="float-right">
+                                      09:00 pm
+                                  </span>
+                                  <span class="label label-success">1</span> Please contact me
+                              </li>
+                              <li class="list-group-item">
+                                  <span class="float-right">
+                                      10:16 am
+                                  </span>
+                                  <span class="label label-info">2</span> Sign a contract
+                              </li>
+                              <li class="list-group-item">
+                                  <span class="float-right">
+                                      08:22 pm
+                                  </span>
+                                  <span class="label label-primary">3</span> Open new shop
+                              </li>
+                              <li class="list-group-item">
+                                  <span class="float-right">
+                                      11:06 pm
+                                  </span>
+                                  <span class="label label-default">4</span> Call back to Sylvia
+                              </li>
+                              <li class="list-group-item">
+                                  <span class="float-right">
+                                      12:00 am
+                                  </span>
+                                  <span class="label label-primary">5</span> Write a letter to Sandra
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="inteli-login.html">
+                              <i class="fa fa-sign-out"></i> Log out
+                          </a>
+                      </li>
+                  </ul>
+
+              </nav>
+          </div>
+          <div class="wrapper wrapper-content">
+              <div class="row">
+                <div class="col-lg-4">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Adquisiciones
+                            </h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="lineChartJs" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>TXT promedio
+                            </h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="lineChartJss" height="180"></canvas>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-6 text-center">
+                                <h1 class="m-xs">456</h1>
+                                <h3 class="font-bold no-margins">
+                                    TXT PL
+                                </h3>
+                              </div>
+                              <div class="col-lg-6 text-center">
+                                <h1 class="m-xs">456</h1>
+                                <h3 class="font-bold no-margins">
+                                    TXT NN
+                                </h3>
+                              </div>
+                              <div class="col-lg-6 text-center mt-4">
+                                  <h1 class="m-xs"><strike>456</strike></h1>
+                                  <h3 class="font-bold no-margins">
+                                    VTL
+                                  </h3>
+                                </div>
+                                <div class="col-lg-6 text-center mt-4">
+                                  <h1 class="m-xs"><strike>456</strike></h1>
+                                  <h3 class="font-bold no-margins">
+                                      VT NN
+                                  </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="ibox">
+                          <div class="ibox-content text-center">
+                              <h5>Pedidos del mes</h5>
+                              <h1 class="no-margins">25,435</h1>
+                              <small>Total</small>
+                          </div>
+                      </div>
+                      <div class="ibox ">
+                          <div class="ibox-content text-center">
+                              <h5>Segmentacion por sexo</h5>
+                              <div class="row">
+                                  <div class="col-lg-6 c-doughnut-dashboard">
+                                      <span class="c-doughnut-dashboard__average">40%</span>
+                                      <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                                      <h5 >Hombres</h5>
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <span class="c-doughnut-dashboard__average">30%</span>
+                                      <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                                      <h5 >Mujeres</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="widget style1 navy-bg">
+                          <div class="row">
+                              <div class="col-4">
+                                  <i class="fa fa-cloud fa-5x"></i>
+                              </div>
+                              <div class="col-8 text-right">
+                                  <span> Cupones Redimidos </span>
+                                  <h2 class="font-bold">150</h2>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="widget style1 lazur-bg">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-cloud fa-5x"></i>
+                                </div>
+                                <div class="col-8 text-right">
+                                    <span> Compartidos </span>
+                                    <h2 class="font-bold">50</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <h5>Venta</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <canvas id="lineChartJsss" height="160"></canvas>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 text-center">
+                                      <h1 class="m-xs">S/. 1557</h1>
+                                      <h3 class="font-bold no-margins">
+                                          VT L
+                                      </h3>
+                                    </div>
+                                    <div class="col-lg-6 text-center">
+                                      <h1 class="m-xs">S/. 15595</h1>
+                                      <h3 class="font-bold no-margins">
+                                          VT NN
+                                      </h3>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Radar Chart Example</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <div id="pie"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="widget yellow-bg p-sm text-center">
+                            <div class="m-b-sm">
+                                <h2 class="m-b-md">Miraflores</h2>
+                                <h3 class="font-bold">
+                                    Local mas afiliado
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="widget yellow-bg p-sm text-center">
+                            <div class="m-b-sm">
+                                <h2 class="m-b-md">Hamburguesas</h2>
+                                <h3 class="font-bold">
+                                    Plato mas ordenado
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-3">
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <h5>Top 10 clientes</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <ul class="list-group clear-list">
+                                        <li class="list-group-item fist-item">
+                                            <span class="float-right">
+                                            </span>
+                                            <span class="label label-success">1</span> Juan
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="float-right">
+                                                x consumo
+                                            </span>
+                                            <span class="label label-info">2</span> Pedro
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="float-right">
+                                            </span>
+                                            <span class="label label-primary">3</span> Maria
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="float-right">
+                                            </span>
+                                            <span class="label label-default">4</span> Aldo
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="float-right">
+                                            </span>
+                                            <span class="label label-primary">5</span> Fredy
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-3">
+                        <div class="widget yellow-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <i class="fa fa-thumbs-up fa-4x"></i>
+                                <h1 class="m-xs">520</h1>
+                                <h3 class="font-bold no-margins">
+                                    Likes
+                                </h3>
+                                <small>amount</small>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="footer">
+              <div class="float-right">
+                  10GB of <strong>250GB</strong> Free.
+              </div>
+              <div>
+                  <strong>Copyright</strong> Example Company &copy; 2014-2018
+              </div>
+          </div>
+          </div>
+          <div class="small-chat-box fadeInRight animated c-small-chat-box">
+              <div class="heading" draggable="true">
+                  <small class="chat-date float-right">
+                      02.19.2015
+                  </small>
+                  Small chat
+              </div>
+
+              <div class="content">
+
+                  <div class="left">
+                      <div class="author-name">
+                          Monica Jackson <small class="chat-date">
+                          10:02 am
+                      </small>
+                      </div>
+                      <div class="chat-message active">
+                          Lorem Ipsum is simply dummy text input.
+                      </div>
+
+                  </div>
+                  <div class="right">
+                      <div class="author-name">
+                          Mick Smith
+                          <small class="chat-date">
+                              11:24 am
+                          </small>
+                      </div>
+                      <div class="chat-message">
+                          Lorem Ipsum is simpl.
+                      </div>
+                  </div>
+                  <div class="left">
+                      <div class="author-name">
+                          Alice Novak
+                          <small class="chat-date">
+                              08:45 pm
+                          </small>
+                      </div>
+                      <div class="chat-message active">
+                          Check this stock char.
+                      </div>
+                  </div>
+                  <div class="right">
+                      <div class="author-name">
+                          Anna Lamson
+                          <small class="chat-date">
+                              11:24 am
+                          </small>
+                      </div>
+                      <div class="chat-message">
+                          The standard chunk of Lorem Ipsum
+                      </div>
+                  </div>
+                  <div class="left">
+                      <div class="author-name">
+                          Mick Lane
+                          <small class="chat-date">
+                              08:45 pm
+                          </small>
+                      </div>
+                      <div class="chat-message active">
+                          I belive that. Lorem Ipsum is simply dummy text.
+                      </div>
+                  </div>
+
+
+              </div>
+              <div class="form-chat">
+                  <div class="input-group input-group-sm">
+                      <input type="text" class="form-control">
+                      <span class="input-group-btn"> <button
+                          class="btn btn-primary" type="button">Send
+                  </button> </span></div>
+              </div>
+
+          </div>
+          <div id="small-chat">
+
+              <span class="badge badge-warning float-right">5</span>
+              <a class="open-small-chat" href="">
+                  <i class="fa fa-comments"></i>
+
+              </a>
+          </div>
+      </div>
+
+      <!-- Mainly scripts -->
+      <script src="js/jquery-3.1.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+      <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+      <!-- Flot -->
+      <script src="js/plugins/flot/jquery.flot.js"></script>
+      <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+      <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+      <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+      <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+      <!-- ChartJS-->
+      <script src="js/plugins/chartJs/Chart.min.js"></script>
+      <script src="js/demo/chartjs-demo.js"></script>
+      <script src="js/demo/chart-newdemo.js"></script>
+
+      <!-- Peity -->
+      <script src="js/plugins/peity/jquery.peity.min.js"></script>
+      <script src="js/demo/peity-demo.js"></script>
+
+      <!-- Custom and plugin javascript -->
+      <script src="js/inspinia.js"></script>
+      <script src="js/plugins/pace/pace.min.js"></script>
+
+      <!-- d3 and c3 charts -->
+      <script src="js/plugins/d3/d3.min.js"></script>
+      <script src="js/plugins/c3/c3.min.js"></script>
+      
+      <!-- Chartist -->
+      <script src="js/plugins/chartist/chartist.min.js"></script>
+
+      <!-- jQuery UI -->
+      <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+      <!-- GITTER -->
+      <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+      <!-- Sparkline -->
+      <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+      <!-- Sparkline demo data  -->
+      <script src="js/demo/sparkline-demo.js"></script>
+
+      <!-- ChartJS-->
+      <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+      <!-- Toastr -->
+      <script src="js/plugins/toastr/toastr.min.js"></script>
+
+
+      <script>
+          $(document).ready(function() {
+
+            c3.generate({
+                bindto: '#pie',
+                data:{
+                    columns: [
+                        ['data1', 30],
+                        ['data2', 120]
+                    ],
+                    colors:{
+                        data1: '#1ab394',
+                        data2: '#BABABA'
+                    },
+                    type : 'pie'
+                }
+            });
+
+              var doughnutData = {
+                  labels: ["Hombre","Mujeres" ],
+                  datasets: [{
+                      data: [300,50],
+                      backgroundColor: ["#dedede","#9CC3DA"]
+                  }]
+              } ;
+
+
+              var doughnutOptions = {
+                  responsive: false,
+                  legend: {
+                      display: false
+                  }
+              };
+
+
+              var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+              new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+
+              var doughnutData2 = {
+                  labels: ["Mujeres","Hombre"],
+                  datasets: [{
+                      data: [70,27],
+                      backgroundColor: ["#dedede","#9CC3DA"]
+                  }]
+              } ;
+
+
+              var doughnutOptions2 = {
+                  responsive: false,
+                  legend: {
+                      display: false
+                  }
+              };
+
+
+              var ctx5 = document.getElementById("doughnutChart2").getContext("2d");
+              new Chart(ctx5, {type: 'doughnut', data: doughnutData2, options:doughnutOptions2});
+
+          });
+      </script>
+  </body>
+</html>
