@@ -9699,3 +9699,27 @@ i.fa.icon-big-manual-book {
   width: 100%;
   display: block;
 }
+.c-doughnut-min{
+  width: 100px;
+  height:100px;
+  margin: 2rem auto;
+  background:#e2e2e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position:relative;
+  overflow: hidden;
+}
+.c-doughnut-min__progress{
+  background: rgb(26, 179, 148);
+  width: 100%;
+}
+.c-doughnut-min__percent{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size: 1rem;
+  
+}
